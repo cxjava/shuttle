@@ -18,9 +18,12 @@ builds:
     - 386
     - amd64
     - arm
+    - arm64
   goarm:
     - 6
     - 7
+  hooks:
+    post: find ./ -xdev -maxdepth 3 -type f -iname 'shuttle*' -executable -exec upx {} \;
   ignore:
     - goos: freebsd
       goarch: arm
@@ -72,4 +75,3 @@ release:
   draft: true
   prerelease: true
   name_template: "{{.ProjectName}}-v{{.Version}}-{{.ShortCommit}}"
-
