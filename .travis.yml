@@ -1,0 +1,29 @@
+language: go
+
+dist: xenial
+sudo: true
+
+go:
+- 1.11.x
+
+cache: apt
+
+addons:
+  apt:
+    packages:
+      - rpm
+      - upx
+
+env:
+  - GORELEASER_VERSION=0.93.2 NFPM_VERSION=0.9.7
+
+matrix:
+  include:
+  - name: goreleaser
+    go: "1.11.x"
+    script:
+      - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
+      - sudo dpkg -i goreleaser_amd64.deb
+      - wget https://github.com/goreleaser/nfpm/releases/download/v${NFPM_VERSION}/nfpm_amd64.deb
+      - sudo dpkg -i nfpm_amd64.deb
+      - goreleaser --snapshot --skip-sign
