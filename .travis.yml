@@ -26,4 +26,6 @@ matrix:
       - sudo dpkg -i goreleaser_amd64.deb
       - wget https://github.com/goreleaser/nfpm/releases/download/v${NFPM_VERSION}/nfpm_amd64.deb
       - sudo dpkg -i nfpm_amd64.deb
+      - rm goreleaser_amd64.deb
+      - rm nfpm_amd64.deb
       - goreleaser --skip-sign
