@@ -6,6 +6,8 @@ sudo: true
 go:
 - 1.11.x
 
+cache: apt
+
 env:
   global:
     - GORELEASER_VERSION=0.93.2
