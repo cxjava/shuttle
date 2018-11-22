@@ -15,7 +15,7 @@ addons:
       - upx
 
 env:
-  - GORELEASER_VERSION=0.93.2 NFPM_VERSION=0.9.7
+  - GORELEASER_VERSION=0.93.2
 
 matrix:
   include:
@@ -24,8 +24,5 @@ matrix:
     script:
       - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
       - sudo dpkg -i goreleaser_amd64.deb
-      - wget https://github.com/goreleaser/nfpm/releases/download/v${NFPM_VERSION}/nfpm_amd64.deb
-      - sudo dpkg -i nfpm_amd64.deb
       - rm goreleaser_amd64.deb
-      - rm nfpm_amd64.deb
-      - goreleaser --skip-validate --skip-sign
+      - goreleaser --skip-validate --skip-sign --debug
