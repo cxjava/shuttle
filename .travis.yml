@@ -15,7 +15,7 @@ env:
 
 install:
   - |
-    if [[ ! -f "/upx/${UPXVER}/upx" ]]
+    if [[ ! -f "${TRAVIS_HOME}/upx/${UPXVER}/upx" ]]
     then
       echo "Installing upx .."
       curl -OL "https://github.com/upx/upx/releases/download/v${UPXVER}/upx-${UPXVER}-amd64_linux.tar.xz"
