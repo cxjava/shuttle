@@ -6,10 +6,7 @@ sudo: true
 go:
 - 1.11.x
 
-cache:
-  directories:
-    - upx
-    - apt
+cache: apt
     
 addons:
   apt:
