@@ -57,3 +57,5 @@ release:
   github:
     owner: cxjava
     name: shuttle
+  draft: true
+  prerelease: true
