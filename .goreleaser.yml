@@ -21,8 +21,6 @@ builds:
   goarm:
     - 6
     - 7
-  hooks:
-    post: find ./ -xdev -maxdepth 3 -type f -iname 'shuttle*' -executable -exec upx {} \;
   ignore:
     - goos: freebsd
       goarch: arm
