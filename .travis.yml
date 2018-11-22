@@ -28,4 +28,4 @@ matrix:
       - sudo dpkg -i nfpm_amd64.deb
       - rm goreleaser_amd64.deb
       - rm nfpm_amd64.deb
-      - goreleaser --skip-sign
+      - goreleaser --skip-validate --skip-sign
