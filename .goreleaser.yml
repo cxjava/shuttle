@@ -51,7 +51,7 @@ archive:
       format: zip
   files:
     - GeoLite2-Country.mmdb
-    - shuttle.yml
+    - shuttle.yaml
     - RespFiles/*
     - view/**/*
   wrap_in_directory: true
