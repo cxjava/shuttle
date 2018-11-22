@@ -59,3 +59,5 @@ release:
     name: shuttle
   draft: true
   prerelease: true
+  name_template: "{{.ProjectName}}-v{{.Version}}"
+
