@@ -11,16 +11,11 @@ builds:
     - windows
     - darwin
     - linux
-    - freebsd
-    - openbsd
-    - netbsd
   goarch:
     - 386
     - amd64
     - arm
-    - arm64
   goarm:
-    - 5
     - 6
     - 7
   ignore:
@@ -62,5 +57,3 @@ release:
   github:
     owner: cxjava
     name: shuttle
-  name_template: '{{.Tag}}'
-  draft: true
