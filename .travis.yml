@@ -9,7 +9,12 @@ go:
 cache:
   directories:
     - upx
-
+    - apt
+    
+addons:
+  apt:
+    packages:
+      - rpm
 env:
   global:
     - GORELEASER_VERSION=0.93.2
