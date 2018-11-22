@@ -20,10 +20,10 @@ install:
       echo "Installing upx .."
       curl -OL "https://github.com/upx/upx/releases/download/v${UPXVER}/upx-${UPXVER}-amd64_linux.tar.xz"
       tar xvf "upx-${UPXVER}-amd64_linux.tar.xz"
-      mkdir -p /upx
-      mv "upx-${UPXVER}-amd64_linux" "/upx/${UPXVER}/upx"
+      mkdir -p ${TRAVIS_HOME}/upx
+      mv "upx-${UPXVER}-amd64_linux" "${TRAVIS_HOME}/upx/${UPXVER}/upx"
     fi
-  - /upx/${UPXVER}/upx --version | grep -E '^upx'
+  - ${TRAVIS_HOME}/upx/${UPXVER}/upx --version | grep -E '^upx'
 
 matrix:
   include:
