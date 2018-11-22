@@ -1,3 +1,6 @@
+before:
+  hooks:
+    - go generate ./...
 project_name: shuttle
 builds:
 - main: cmd/main.go
@@ -15,6 +18,7 @@ builds:
     - 386
     - amd64
     - arm
+    - arm64
   goarm:
     - 6
     - 7
@@ -22,9 +26,15 @@ builds:
     - goos: freebsd
       goarch: arm
       goarm: 6
+    - goos: freebsd
+      goarch: arm
+      goarm: 7
     - goos: openbsd
       goarch: arm
       goarm: 6
+    - goos: openbsd
+      goarch: arm
+      goarm: 7
 changelog:
   sort: asc
   filters:
@@ -40,8 +50,11 @@ archive:
     - goos: windows
       format: zip
   files:
-    - none*
-  wrap_in_directory: false
+    - GeoLite2-Country.mmdb
+    - shuttle.yml
+    - RespFiles/*
+    - view/**/*
+  wrap_in_directory: true
   replacements:
     amd64: 64-bit
     386: 32-bit
@@ -59,5 +72,5 @@ release:
     name: shuttle
   draft: true
   prerelease: true
-  name_template: "{{.ProjectName}}-v{{.Version}}"
+  name_template: "{{.ProjectName}}-v{{.Version}}-{{.ShortCommit}}"
 
