@@ -58,4 +58,8 @@ archive:
     netbsd: NetBSD
     freebsd: FreeBSD
 release:
+  github:
+    owner: cxjava
+    name: shuttle
+  name_template: '{{.Tag}}'
   draft: true
