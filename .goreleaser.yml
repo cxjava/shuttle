@@ -1,6 +1,7 @@
 project_name: shuttle
 builds:
-- env:
+- main: cmd/main.go
+  env:
     - CGO_ENABLED=0
     - GIN_MODE=release
   ldflags:
