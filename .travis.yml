@@ -12,16 +12,16 @@ env:
   global:
     - GORELEASER_VERSION=0.93.2
     - UPXVER="3.95"
-    
-install:
-  - go get -u -v github.com/UnnoTed/fileb0x
-  - go install github.com/UnnoTed/fileb0x
-  - go generate ./...
-  
+
 matrix:
   include:
   - name: goreleaser
     go: "1.11.x"
+    before_script:
+      - go get -u -v github.com/UnnoTed/fileb0x
+      - go install github.com/UnnoTed/fileb0x
+      - go generate ./...
+  
     script:
       - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
       - sudo dpkg -i goreleaser_amd64.deb
