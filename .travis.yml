@@ -31,7 +31,6 @@ matrix:
         fi
       - export PATH="${TRAVIS_BUILD_DIR}/upx/${UPXVER}/:${PATH}"
       - upx --version | grep -E '^upx'
-      - mkdir RespFiles
       - cp example.yaml shuttle.yaml
       - echo '#!/bin/bash' >> upx.sh
       - echo "find ./dist -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh

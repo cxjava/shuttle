@@ -52,10 +52,7 @@ archive:
     - goos: windows
       format: zip
   files:
-    - GeoLite2-Country.mmdb
     - shuttle.yaml
-    - RespFiles/*
-    - view/**/*
   wrap_in_directory: true
   replacements:
     amd64: 64-bit
