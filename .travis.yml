@@ -20,8 +20,6 @@ matrix:
       - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
       - sudo dpkg -i goreleaser_amd64.deb
       - rm goreleaser_amd64.deb
-      - cp example.yaml shuttle.yaml
-      - mkdir RespFiles
       - |
         if [[ ! -f "upx/${UPXVER}/upx" ]]
         then
@@ -33,8 +31,4 @@ matrix:
         fi
       - export PATH="${TRAVIS_BUILD_DIR}/upx/${UPXVER}/:${PATH}"
       - upx --version | grep -E '^upx'
-      - echo '#!/bin/sh' >> upx.sh
-      - echo "find ./ -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
-      - chmod +x upx.sh
-      - cat upx.sh
       - goreleaser --skip-validate --skip-sign --debug
