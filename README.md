@@ -1,5 +1,11 @@
 # Shuttle
 
+<div align="center">
+  <a href="https://travis-ci.com/cxjava/shuttle">
+    <img src="https://travis-ci.com/cxjava/shuttle.svg?branch=master" alt="Build Status">
+  </a>
+</div>
+
 **Shuttle** is a **cross-platform** network proxy tool based on Go. Feel free to join our [Slack](https://join.slack.com/t/shuttle-talk/shared_invite/enQtNDMxNTQyNTIwODcwLTcyNTc0NmU4MzJhOTEzNTMwYWJlMGM1NDE2OTA2OWNmZDRlM2M0MjYxNjgzMTc1YWRhOTA4MTAzNTRkZDM0NDc) or [Telegram](https://t.me/joinchat/GrRxoBJXAKTdZBrTIJfIbQ).
 （logo created by **@不二**）
 

@@ -1,5 +1,12 @@
 # Shuttle
 
+
+<div align="center">
+  <a href="https://travis-ci.com/cxjava/shuttle">
+    <img src="https://travis-ci.com/cxjava/shuttle.svg?branch=master" alt="Build Status">
+  </a>
+</div>
+
 **Shuttle**是一个基于Go开发的**全平台**网络代理工具。欢迎加入讨论 [Slack](https://join.slack.com/t/shuttle-talk/shared_invite/enQtNDMxNTQyNTIwODcwLTcyNTc0NmU4MzJhOTEzNTMwYWJlMGM1NDE2OTA2OWNmZDRlM2M0MjYxNjgzMTc1YWRhOTA4MTAzNTRkZDM0NDc) or [Telegram](https://t.me/joinchat/GrRxoBJXAKTdZBrTIJfIbQ)。
 （logo**@不二**）
 
