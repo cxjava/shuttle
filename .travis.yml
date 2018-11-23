@@ -12,6 +12,10 @@ env:
   global:
     - GORELEASER_VERSION=0.93.2
     - UPXVER="3.95"
+    
+install:
+  - go generate ./...
+  
 matrix:
   include:
   - name: goreleaser
