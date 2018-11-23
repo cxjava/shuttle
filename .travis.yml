@@ -22,4 +22,15 @@ matrix:
       - rm goreleaser_amd64.deb
       - cp example.yaml shuttle.yaml
       - mkdir RespFiles
+      - |
+        if [[ ! -f "upx/${UPXVER}/upx" ]]
+        then
+          echo "Installing upx .."
+          curl -OL "https://github.com/upx/upx/releases/download/v${UPXVER}/upx-${UPXVER}-amd64_linux.tar.xz"
+          tar xvf "upx-${UPXVER}-amd64_linux.tar.xz"
+          mkdir -p upx
+          mv "upx-${UPXVER}-amd64_linux" "upx/${UPXVER}"
+        fi
+      - export PATH="${TRAVIS_BUILD_DIR}/upx/${UPXVER}/:${PATH}"
+      - upx --version | grep -E '^upx'
       - goreleaser --skip-validate --skip-sign --debug
