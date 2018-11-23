@@ -1,11 +1,11 @@
 package selector
 
 import (
-	"github.com/sipt/shuttle"
-	"time"
-	"sync/atomic"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/log"
 	"io"
-	"github.com/sipt/shuttle/log"
+	"sync/atomic"
+	"time"
 )
 
 const (

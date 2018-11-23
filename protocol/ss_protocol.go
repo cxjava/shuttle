@@ -1,13 +1,13 @@
 package protocol
 
 import (
-	"net"
-	"github.com/sipt/shuttle"
-	"strconv"
 	"bytes"
 	"fmt"
-	"github.com/sipt/shuttle/ciphers"
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/ciphers"
+	"github.com/cxjava/shuttle/log"
+	"net"
+	"strconv"
 )
 
 func init() {

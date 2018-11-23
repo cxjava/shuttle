@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle/log"
 )
 
 var groups []*ServerGroup
@@ -20,7 +20,7 @@ func InitServers(gs []*ServerGroup, ss []*Server) error {
 	for i := range ss {
 		if ss[i].Name != PolicyDirect && ss[i].Name != PolicyReject {
 			g.Servers[index] = ss[i]
-			index ++
+			index++
 		}
 	}
 	for i := range gs {
@@ -121,7 +121,7 @@ type Server struct {
 	Name          string
 	Rtt           time.Duration
 	ProxyProtocol string
-	IProtocol `json:"-"`
+	IProtocol     `json:"-"`
 }
 
 func (s *Server) GetName() string {

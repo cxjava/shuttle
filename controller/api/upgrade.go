@@ -1,10 +1,10 @@
 package api
 
 import (
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/extension/config"
+	"github.com/cxjava/shuttle/upgrade"
 	"github.com/gin-gonic/gin"
-	"github.com/sipt/shuttle"
-	"github.com/sipt/shuttle/extension/config"
-	"github.com/sipt/shuttle/upgrade"
 	"os"
 	"path/filepath"
 )

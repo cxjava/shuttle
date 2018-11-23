@@ -2,7 +2,7 @@ package shuttle
 
 import (
 	"errors"
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle/log"
 	"net"
 )
 

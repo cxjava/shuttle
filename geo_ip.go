@@ -3,10 +3,10 @@ package shuttle
 import (
 	"net"
 
+	"github.com/cxjava/shuttle/assets"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/util"
 	"github.com/oschwald/geoip2-golang"
-	"github.com/sipt/shuttle/assets"
-	"github.com/sipt/shuttle/log"
-	"github.com/sipt/shuttle/util"
 )
 
 var geoipDB *geoip2.Reader

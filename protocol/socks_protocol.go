@@ -1,11 +1,11 @@
 package protocol
 
 import (
-	"net"
-	"github.com/sipt/shuttle"
-	"golang.org/x/net/proxy"
-	"github.com/sipt/shuttle/log"
 	"fmt"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/log"
+	"golang.org/x/net/proxy"
+	"net"
 )
 
 func init() {

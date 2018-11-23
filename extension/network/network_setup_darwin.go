@@ -4,7 +4,7 @@ package network
 
 import (
 	"bytes"
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle/log"
 	"os/exec"
 	"strings"
 )
@@ -82,7 +82,7 @@ func listServices(callback networkSetupFunc) error {
 }
 
 func Command(name string, args ...string) (string, error) {
-	cmd := exec.Command(name, args ...)
+	cmd := exec.Command(name, args...)
 	var out, stderr bytes.Buffer
 	cmd.Stdout = &out
 	cmd.Stderr = &stderr

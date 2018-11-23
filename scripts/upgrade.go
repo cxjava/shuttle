@@ -4,7 +4,7 @@ import (
 	"archive/zip"
 	"flag"
 	"fmt"
-	"github.com/sipt/shuttle/extension/config"
+	"github.com/cxjava/shuttle/extension/config"
 	"io"
 	"io/ioutil"
 	"os"

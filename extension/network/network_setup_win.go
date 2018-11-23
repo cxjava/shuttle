@@ -3,10 +3,10 @@
 package network
 
 import (
-	"os/exec"
 	"bytes"
+	"github.com/cxjava/shuttle/log"
 	"net"
-	"github.com/sipt/shuttle/log"
+	"os/exec"
 )
 
 //reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f
@@ -64,7 +64,7 @@ func SocksProxySwitch(status bool, args ...string) (err error) {
 }
 
 func Command(name string, args ...string) (string, error) {
-	cmd := exec.Command(name, args ...)
+	cmd := exec.Command(name, args...)
 	var out, stderr bytes.Buffer
 	cmd.Stdout = &out
 	cmd.Stderr = &stderr

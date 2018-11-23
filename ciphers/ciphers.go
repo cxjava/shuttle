@@ -1,10 +1,10 @@
 package ciphers
 
 import (
-	"github.com/sipt/shuttle"
-	"github.com/sipt/shuttle/ciphers/ssstream"
 	"fmt"
-	"github.com/sipt/shuttle/ciphers/ssaead"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/ciphers/ssaead"
+	"github.com/cxjava/shuttle/ciphers/ssstream"
 )
 
 type ConnDecorate func(password string, conn shuttle.IConn) (shuttle.IConn, error)

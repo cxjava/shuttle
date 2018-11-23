@@ -1,13 +1,13 @@
 package ssstream
 
 import (
-	"github.com/sipt/shuttle"
-	"github.com/sipt/shuttle/pool"
 	"crypto/cipher"
-	"io"
-	"crypto/rand"
 	"crypto/md5"
-	"github.com/sipt/shuttle/log"
+	"crypto/rand"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/pool"
+	"io"
 )
 
 var streamCiphers = make(map[string]IStreamCipher)

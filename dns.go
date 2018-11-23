@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/cxjava/shuttle/log"
 	"github.com/miekg/dns"
-	"github.com/sipt/shuttle/log"
 )
 
 const (

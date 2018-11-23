@@ -1,8 +1,8 @@
 package shuttle
 
 import (
-	"github.com/sipt/shuttle/log"
-	"github.com/sipt/shuttle/pool"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/pool"
 	"io"
 )
 

@@ -2,10 +2,10 @@ package shuttle
 
 import (
 	"bytes"
-	"github.com/sipt/shuttle/extension/config"
-	"github.com/sipt/shuttle/log"
-	"github.com/sipt/shuttle/pool"
-	"github.com/sipt/shuttle/util"
+	"github.com/cxjava/shuttle/extension/config"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/pool"
+	"github.com/cxjava/shuttle/util"
 	"net"
 	"net/http"
 	"net/url"

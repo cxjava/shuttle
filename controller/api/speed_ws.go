@@ -1,11 +1,11 @@
 package api
 
 import (
-	"net/http"
-	"github.com/sipt/shuttle"
-	"github.com/sipt/shuttle/log"
-	"time"
 	"fmt"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/log"
+	"net/http"
+	"time"
 )
 
 func WsSpeedHandler(w http.ResponseWriter, r *http.Request) {

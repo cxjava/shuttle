@@ -1,12 +1,12 @@
 package shuttle
 
 import (
+	"bytes"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/pool"
+	"github.com/cxjava/shuttle/util"
 	"net"
 	"time"
-	"bytes"
-	"github.com/sipt/shuttle/pool"
-	"github.com/sipt/shuttle/util"
-	"github.com/sipt/shuttle/log"
 )
 
 var DefaultTimeOut = 10 * time.Second

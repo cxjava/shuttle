@@ -3,7 +3,7 @@ package ssstream
 import (
 	"crypto/cipher"
 	"encoding/binary"
-	"github.com/sipt/shuttle/pool"
+	"github.com/cxjava/shuttle/pool"
 	"golang.org/x/crypto/salsa20/salsa"
 )
 

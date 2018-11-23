@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/cxjava/shuttle/assets"
+	"github.com/cxjava/shuttle/controller/api"
 	"github.com/gin-gonic/gin"
-	"github.com/sipt/shuttle/assets"
-	"github.com/sipt/shuttle/controller/api"
 )
 
 func staticHandler(urlPrefix string, fs http.FileSystem) gin.HandlerFunc {

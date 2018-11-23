@@ -1,11 +1,11 @@
 package shuttle
 
 import (
-	"os"
 	"fmt"
-	"sync"
+	"github.com/cxjava/shuttle/log"
 	"io"
-	"github.com/sipt/shuttle/log"
+	"os"
+	"sync"
 )
 
 var dump IDump

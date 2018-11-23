@@ -2,7 +2,7 @@ package shuttle
 
 import (
 	"fmt"
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle/log"
 	"github.com/sipt/yaml"
 	"io/ioutil"
 	"net"
@@ -172,10 +172,10 @@ func InitConfig(filePath string) (*General, error) {
 	ss := make([]*Server, len(conf.Proxy)+2)
 	index := 0
 	ss[index] = &Server{Name: PolicyDirect} // 直连
-	index ++
+	index++
 	ss[index] = &Server{Name: PolicyReject} // 拒绝
 	for k, v := range conf.Proxy {
-		index ++
+		index++
 		if len(v) < 2 {
 			return nil, fmt.Errorf("resolve config file [proxy] [%s] failed", k)
 		}
@@ -188,7 +188,7 @@ func InitConfig(filePath string) (*General, error) {
 	index = 0
 	for k := range conf.ProxyGroup {
 		gs[index] = &ServerGroup{Name: k}
-		index ++
+		index++
 	}
 	getServer := func(name string) interface{} {
 		for i := range ss {
@@ -344,8 +344,8 @@ func EmojiDecode(data []byte) int {
 			if index != offset {
 				data[offset] = data[index]
 			}
-			offset ++
-			index ++
+			offset++
+			index++
 		}
 	}
 	return offset

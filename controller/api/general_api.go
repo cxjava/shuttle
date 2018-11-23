@@ -1,9 +1,9 @@
 package api
 
 import (
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/extension/network"
 	"github.com/gin-gonic/gin"
-	"github.com/sipt/shuttle"
-	"github.com/sipt/shuttle/extension/network"
 	"strings"
 )
 

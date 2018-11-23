@@ -1,7 +1,7 @@
 package shuttle
 
 import (
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle/log"
 )
 
 func Recover(fs ...func()) {

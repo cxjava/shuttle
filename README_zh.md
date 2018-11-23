@@ -440,7 +440,7 @@ Http-Map:
 ```json
 {
   "name": "Shuttle",
-  "github-link": "https://github.com/sipt/shuttle",
+  "github-link": "https://github.com/cxjava/shuttle",
   "data": "response mock"
 }
 ```
@@ -590,9 +590,9 @@ HTTPS抓包需要几个步骤：
 
 ### 从源码编译
 ```sh
-go get -d github.com/sipt/shuttle
-cd $GOPATH/src/github.com/sipt/shuttle/assets
+go get -d github.com/cxjava/shuttle
+cd $GOPATH/src/github.com/cxjava/shuttle/assets
 go generate # 打包HTML和GeoLite2-Country.mmdb到assets/assets.go文件
-cd $GOPATH/src/github.com/sipt/shuttle/cmd
+cd $GOPATH/src/github.com/cxjava/shuttle/cmd
 go build
 ```

@@ -1,13 +1,13 @@
 package api
 
 import (
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/util"
 	"github.com/gorilla/websocket"
-	"time"
 	"net/http"
 	"sync"
-	"github.com/sipt/shuttle/util"
-	"github.com/sipt/shuttle/log"
-	"github.com/sipt/shuttle"
+	"time"
 )
 
 func init() {

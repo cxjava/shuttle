@@ -1,11 +1,11 @@
 package selector
 
 import (
-	"testing"
-	"github.com/sipt/shuttle"
-	_ "github.com/sipt/shuttle/ciphers"
 	"fmt"
+	"github.com/cxjava/shuttle"
+	_ "github.com/cxjava/shuttle/ciphers"
 	"net"
+	"testing"
 )
 
 func TestRttSelector_Current(t *testing.T) {

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sipt/shuttle/log"
-	"github.com/sipt/shuttle/util"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/util"
 )
 
 const (

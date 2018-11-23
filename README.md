@@ -422,7 +422,7 @@ For every request that matches `^http://www.baidu.com/$`, return directly.
 ```json
 {
   "name": "Shuttle",
-  "github-link": "https://github.com/sipt/shuttle",
+  "github-link": "https://github.com/cxjava/shuttle",
   "data": "response mock"
 }
 ```
@@ -564,9 +564,9 @@ The dumped data just shows "The file is too large" instead of data detail for th
 
 ### Build from source
 ```sh
-go get -d github.com/sipt/shuttle
-cd $GOPATH/src/github.com/sipt/shuttle/assets
+go get -d github.com/cxjava/shuttle
+cd $GOPATH/src/github.com/cxjava/shuttle/assets
 go generate # package html and GeoLite2-Country.mmdb resources into assets/assets.go
-cd $GOPATH/src/github.com/sipt/shuttle/cmd
+cd $GOPATH/src/github.com/cxjava/shuttle/cmd
 go build
 ```

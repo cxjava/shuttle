@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/sipt/shuttle"
+	"github.com/cxjava/shuttle"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -118,7 +118,7 @@ func GetLatestRelease() (*Release, error) {
 	return release, err
 }
 
-const LatestURL = "https://api.github.com/repos/sipt/shuttle/releases/latest"
+const LatestURL = "https://api.github.com/repos/cxjava/shuttle/releases/latest"
 
 type Release struct {
 	Assets []struct {

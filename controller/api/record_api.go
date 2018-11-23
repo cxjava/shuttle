@@ -1,7 +1,7 @@
 package api
 
 import (
-	"github.com/sipt/shuttle"
+	"github.com/cxjava/shuttle"
 	"github.com/gin-gonic/gin"
 )
 

@@ -1,8 +1,8 @@
 package api
 
 import (
+	"github.com/cxjava/shuttle"
 	"github.com/gin-gonic/gin"
-	"github.com/sipt/shuttle"
 )
 
 func DNSCacheList(ctx *gin.Context) {

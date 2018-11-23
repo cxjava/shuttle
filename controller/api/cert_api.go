@@ -1,10 +1,10 @@
 package api
 
 import (
+	"bytes"
+	"github.com/cxjava/shuttle"
 	"github.com/gin-gonic/gin"
 	"io"
-	"bytes"
-	"github.com/sipt/shuttle"
 )
 
 func DownloadCert(ctx *gin.Context) {

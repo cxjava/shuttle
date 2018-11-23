@@ -5,13 +5,13 @@ import (
 	"crypto/sha1"
 	"io"
 
-	"golang.org/x/crypto/hkdf"
-	"github.com/sipt/shuttle"
 	"bytes"
 	"crypto/md5"
 	"crypto/rand"
-	"github.com/sipt/shuttle/pool"
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle"
+	"github.com/cxjava/shuttle/log"
+	"github.com/cxjava/shuttle/pool"
+	"golang.org/x/crypto/hkdf"
 )
 
 var aeadCiphers = make(map[string]IAEADCipher)

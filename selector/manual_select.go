@@ -1,8 +1,8 @@
 package selector
 
 import (
-	"github.com/sipt/shuttle"
 	"fmt"
+	"github.com/cxjava/shuttle"
 )
 
 func init() {

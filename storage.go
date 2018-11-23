@@ -1,7 +1,7 @@
 package shuttle
 
 import (
-	"github.com/sipt/shuttle/log"
+	"github.com/cxjava/shuttle/log"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -167,7 +167,7 @@ func (l *LinkedList) Append(r *Record) {
 		l.tail.next = &node{record: r}
 		l.tail = l.tail.next
 	}
-	l.count ++
+	l.count++
 
 	for l.count > maxCount {
 		go func(id int64) {
@@ -178,7 +178,7 @@ func (l *LinkedList) Append(r *Record) {
 		}(l.head.record.ID)
 		// 收缩
 		l.head.next, l.head = nil, l.head.next
-		l.count --
+		l.count--
 	}
 	l.Unlock()
 }
