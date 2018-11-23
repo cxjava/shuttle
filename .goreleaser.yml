@@ -4,7 +4,7 @@ before:
     - mkdir RespFiles
     - cp example.yaml shuttle.yaml
     - echo '#!/bin/bash' >> upx.sh
-    - echo "find ./ -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
+    - echo "find ./dist -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
     - chmod +x upx.sh
     - cat upx.sh
 project_name: shuttle
