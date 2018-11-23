@@ -14,6 +14,7 @@ env:
     - UPXVER="3.95"
     
 install:
+  - go get github.com/UnnoTed/fileb0x
   - go generate ./...
   
 matrix:
