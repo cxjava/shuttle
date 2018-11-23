@@ -1,14 +1,34 @@
 package controller
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/sipt/shuttle/controller/api"
-	"strings"
 	"fmt"
-	"net/http"
-	"github.com/sipt/shuttle/controller/web"
 	"io/ioutil"
+	"net/http"
+	"strings"
+
+	"github.com/gin-gonic/gin"
+	"github.com/sipt/shuttle/assets"
+	"github.com/sipt/shuttle/controller/api"
 )
+
+func staticHandler(urlPrefix string, fs http.FileSystem) gin.HandlerFunc {
+	fileserver := http.FileServer(fs)
+	if urlPrefix != "" {
+		fileserver = http.StripPrefix(urlPrefix, fileserver)
+	}
+	return func(c *gin.Context) {
+		fileserver.ServeHTTP(c.Writer, c.Request)
+		c.Abort()
+	}
+}
+
+func index(ctx *gin.Context) {
+	b, err := assets.ReadFile("index.html")
+	if err != nil {
+		panic(err)
+	}
+	ctx.Data(200, "text/html; charset=utf-8", b)
+}
 
 func StartController(inter, port string, shutdownSignal chan bool, reloadConfigSignal chan bool, upgradeSignal chan string, level string) {
 	if level == "info" {
@@ -18,7 +38,15 @@ func StartController(inter, port string, shutdownSignal chan bool, reloadConfigS
 	e := gin.Default()
 	e.Use(Cors())
 	api.APIRoute(e.Group("/api"), shutdownSignal, reloadConfigSignal, upgradeSignal)
-	web.WebRoute(e)
+
+	e.GET("/", index)
+	e.GET("/records", index)
+	e.GET("/dns-cache", index)
+	e.GET("/servers", index)
+	e.GET("/mitm", index)
+	e.GET("/general", index)
+	e.Use(staticHandler("/", assets.HTTP))
+
 	e.Run(inter + ":" + port)
 }
 

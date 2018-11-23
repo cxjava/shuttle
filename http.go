@@ -2,14 +2,15 @@ package shuttle
 
 import (
 	"bufio"
-	"github.com/sipt/shuttle/log"
-	"github.com/sipt/shuttle/util"
 	"io"
 	"net"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/sipt/shuttle/log"
+	"github.com/sipt/shuttle/util"
 )
 
 const (
