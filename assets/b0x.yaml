@@ -49,7 +49,7 @@ compression:
   #
   # type: bool
   # default: false
-  compress: true
+  compress: false
 
   # valid values are:
   # -> "NoCompression"
@@ -120,7 +120,7 @@ custom:
   - base: "../"
     files: 
     - "../GeoLite2-Country.mmdb"
-  - base: "../view/"
+  - base: "../view"
     files:
     - "../view/"
     exclude: 

@@ -10,7 +10,7 @@ cache: apt
 env:
   global:
     - GORELEASER_VERSION=0.93.2
-    - UPXVER="3.95"
+    - UPXVER="3.94"
 
 install:
   - go get -u -v github.com/UnnoTed/fileb0x
