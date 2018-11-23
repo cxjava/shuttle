@@ -39,7 +39,7 @@ func main() {
 	logPath := flag.String("lp", "logs", "logs path")
 	flag.Parse()
 	//init GeoIP
-	var geoIPDB = "GeoLite2-Couexample.yamlntry.mmdb"
+	var geoIPDB = "GeoLite2-Country.mmdb"
 	err := shuttle.InitGeoIP(geoIPDB)
 	if err != nil {
 		fmt.Println(err.Error())
