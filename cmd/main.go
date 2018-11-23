@@ -3,14 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/cxjava/shuttle"
-	_ "github.com/cxjava/shuttle/ciphers"
-	"github.com/cxjava/shuttle/controller"
-	"github.com/cxjava/shuttle/extension/config"
-	"github.com/cxjava/shuttle/extension/network"
-	"github.com/cxjava/shuttle/log"
-	_ "github.com/cxjava/shuttle/protocol"
-	_ "github.com/cxjava/shuttle/selector"
 	"io/ioutil"
 	"net"
 	"os"
@@ -22,6 +14,15 @@ import (
 	"strings"
 	"syscall"
 	"time"
+
+	"github.com/cxjava/shuttle"
+	_ "github.com/cxjava/shuttle/ciphers"
+	"github.com/cxjava/shuttle/controller"
+	"github.com/cxjava/shuttle/extension/config"
+	"github.com/cxjava/shuttle/extension/network"
+	"github.com/cxjava/shuttle/log"
+	_ "github.com/cxjava/shuttle/protocol"
+	_ "github.com/cxjava/shuttle/selector"
 )
 
 var (
@@ -37,15 +38,16 @@ func main() {
 	logMode := flag.String("l", "file", "logMode: off | console | file")
 	logPath := flag.String("lp", "logs", "logs path")
 	flag.Parse()
-	//init Config
-	general, err := shuttle.InitConfig(*configPath)
+	//init GeoIP
+	var geoIPDB = "GeoLite2-Couexample.yamlntry.mmdb"
+	err := shuttle.InitGeoIP(geoIPDB)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
 	}
-	//init GeoIP
-	var geoIPDB = "GeoLite2-Country.mmdb"
-	err = shuttle.InitGeoIP(geoIPDB)
+	//init Config
+	var general *shuttle.General
+	general, err = shuttle.InitConfig(*configPath)
 	if err != nil {
 		fmt.Println(err.Error())
 		return
