@@ -1,6 +1,5 @@
 language: go
-install: true
-sudo: required
+sudo: true
 go:
 - 1.11.x
 
