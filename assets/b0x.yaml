@@ -49,7 +49,7 @@ compression:
   #
   # type: bool
   # default: false
-  compress: true
+  compress: false
 
   # valid values are:
   # -> "NoCompression"
