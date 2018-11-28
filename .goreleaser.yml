@@ -10,6 +10,8 @@ builds:
   ldflags:
     - "-s -w"
   binary: shuttle
+  flags:
+    - -tags=release
   goos:
     - windows
     - darwin

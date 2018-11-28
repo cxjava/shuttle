@@ -16,7 +16,6 @@ install:
   - go get -u -v github.com/UnnoTed/fileb0x
   - go install github.com/UnnoTed/fileb0x
   - go generate ./...
-  - go get -t -v ./...
 
 script:
   - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
@@ -37,7 +36,7 @@ script:
   - echo '#!/bin/bash' >> upx.sh
   - echo "find ./dist -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
   - chmod +x upx.sh
-  - cat upx.sh
+  - ls -al assets && ls -al upx && ls -al .
   - goreleaser --skip-validate --skip-sign --debug
 
 branches:
