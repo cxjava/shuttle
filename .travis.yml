@@ -1,7 +1,6 @@
 language: go
-
-sudo: true
-
+install: true
+sudo: required
 go:
 - 1.11.x
 
@@ -11,17 +10,13 @@ env:
   global:
     - GORELEASER_VERSION=0.93.2
     - UPXVER="3.94"
-
-install:
+before_install:
   - go get -u -v github.com/UnnoTed/fileb0x
   - go install github.com/UnnoTed/fileb0x
-  - go generate ./...
-  - go get -t -v ./...
 
 script:
   - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
   - sudo dpkg -i goreleaser_amd64.deb
-  - rm goreleaser_amd64.deb
   - |
     if [[ ! -f "upx/${UPXVER}/upx" ]]
     then
@@ -37,7 +32,6 @@ script:
   - echo '#!/bin/bash' >> upx.sh
   - echo "find ./dist -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
   - chmod +x upx.sh
-  - ls -al assets && ls -al upx && ls -al .
   - goreleaser --skip-validate --skip-sign --debug
 
 branches:
