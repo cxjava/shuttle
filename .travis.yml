@@ -9,12 +9,7 @@ env:
   global:
     - GORELEASER_VERSION=0.93.2
     - UPXVER="3.94"
-install:
-  - go get -u -v github.com/UnnoTed/fileb0x
-  - go install github.com/UnnoTed/fileb0x
-  - go get -t -v ./...
-
-script:
+before_install:
   - wget https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/goreleaser_amd64.deb
   - sudo dpkg -i goreleaser_amd64.deb
   - |
@@ -28,10 +23,14 @@ script:
     fi
   - export PATH="${TRAVIS_BUILD_DIR}/upx/${UPXVER}/:${PATH}"
   - upx --version | grep -E '^upx'
-  - cp example.yaml shuttle.yaml
   - echo '#!/bin/bash' >> upx.sh
   - echo "find ./dist -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
   - chmod +x upx.sh
+  - go get -u -v github.com/UnnoTed/fileb0x
+  - go install github.com/UnnoTed/fileb0x
+
+script:
+  - cp example.yaml shuttle.yaml
   - goreleaser --skip-validate --skip-sign --debug
 
 branches:
