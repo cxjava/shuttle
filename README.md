@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://travis-ci.com/cxjava/shuttle">
-    <img src="https://travis-ci.com/cxjava/shuttle.svg?branch=master" alt="Build Status">
+    <img src="https://travis-ci.org/cxjava/shuttle.svg?branch=master" alt="Build Status">
   </a>
 </div>
 
