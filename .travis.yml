@@ -23,14 +23,10 @@ before_install:
     fi
   - export PATH="${TRAVIS_BUILD_DIR}/upx/${UPXVER}/:${PATH}"
   - upx --version | grep -E '^upx'
-  - echo '#!/bin/bash' >> upx.sh
-  - echo "find ./dist -xdev -maxdepth 3 -type f -name 'shuttle*' | xargs upx" >> upx.sh
-  - chmod +x upx.sh
   - go get -u -v github.com/UnnoTed/fileb0x
   - go install github.com/UnnoTed/fileb0x
 
 script:
-  - cp example.yaml shuttle.yaml
   - goreleaser --skip-validate --skip-sign --debug
 
 branches:

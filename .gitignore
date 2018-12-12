@@ -3,4 +3,5 @@
 temp/
 _output/
 scripts/
-assets/assets.go
+dist/
+assets/assets_release.go
