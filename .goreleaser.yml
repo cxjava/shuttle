@@ -1,6 +1,8 @@
 before:
   hooks:
     - go generate ./...
+    - chmod +x upx.sh
+    - chmod +x upx.upgrade.sh
     - cp example.yaml shuttle.yaml
 project_name: shuttle
 builds:
@@ -58,7 +60,7 @@ builds:
     - 6
     - 7
   hooks:
-    post: ./upx.sh
+    post: ./upx.upgrade.sh
   ignore:
     - goos: freebsd
       goarch: arm
