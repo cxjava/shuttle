@@ -8,7 +8,7 @@ project_name: shuttle
 builds:
 - main: cmd/main.go
   env:
-    - CGO_ENABLED=0
+    - CGO_ENABLED=1
   ldflags:
     - "-s -w"
   binary: shuttle
