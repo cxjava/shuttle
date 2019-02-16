@@ -8,17 +8,21 @@ project_name: shuttle
 builds:
 - main: cmd/main.go
   env:
-    - CGO_ENABLED=1
-    - CC=arm-linux-gnueabi-gcc
+    - CGO_ENABLED=0
   ldflags:
     - "-s -w"
   binary: shuttle
   flags:
     - -tags=release
   goos:
+    - windows
+    - darwin
     - linux
   goarch:
+    - 386
+    - amd64
     - arm
+    - arm64
   goarm:
     - 6
     - 7
